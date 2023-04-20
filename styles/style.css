@@ -1,0 +1,386 @@
+@import url(./reset.css);
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(../images/background.jpg);
+  background-repeat: repeat;
+}
+
+/* NAVIGATION */
+
+#main-nav {
+  width: 100%;
+  height: 50px;
+  background-color: #2cb5ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#main-nav li {
+  margin: 0 10px;
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+
+#main-nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: background-color 0.3s;
+  height: 100%;
+  padding: 0 20px;
+}
+
+#main-nav a:hover:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #00a3d9;
+}
+
+.nav-item {
+  height: 52px;
+  position: relative;
+  z-index: 1;
+}
+
+#main-nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+#main-nav a:before {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2cb5ff;
+  z-index: -1;
+}
+
+/* HEADER */
+
+#main-header {
+  margin-bottom: 20px;
+  height: 70vh;
+  width: 100%;
+  background-image: url('../images/jason-dent-itA0ybdIDTs-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#main-header h1 {
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 0.5em;
+}
+
+#main-header h2 {
+  font-size: 1.5em;
+  color: #fff;
+  margin-bottom: 2em;
+}
+
+#main-header button {
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+#main-header button:hover {
+  background-color: #2cb5ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media only screen and (max-height: 560px) {
+  #main-header h1 {
+    font-size: 1.2em;
+  }
+  #main-header h2 {
+    font-size: .5em;
+  }
+}
+
+@media only screen and (max-height: 200px) {
+  #main-header h1 {
+    font-size: .9em;
+  }
+  #main-header h2 {
+    font-size: .3em;
+  }
+}
+
+/* MAIN CONTENT */
+
+#main-content {
+  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+  background-color: white;
+}
+
+/* MAIN */
+
+main {
+  width: calc(100% - 30%);
+  float: right;
+  background-color: white;
+  padding: 20px;
+}
+
+figure {
+  width: 30%;
+  padding: 20px;
+}
+
+@media screen and (max-width: 560px) {
+  figure {
+    width: 100%;
+    float: none;
+  }
+  
+  figure p {
+    float: none;
+  }
+}
+
+#figure-one {
+  float: left;
+}
+
+#figure-two {
+  float: right;
+}
+
+figure p:nth-child(1) {
+  float: right;
+}
+
+figure p:nth-child(2) {
+  float: right;
+}
+
+figure p:nth-child(3) {
+  float: right;
+}
+
+figure p:nth-child(4) {
+  float: left;
+}
+figure p:nth-child(5) {
+  float: left;
+}
+figure p:nth-child(6) {
+  float: left;
+}
+
+figure cite {
+  display: flex;
+  flex-direction: row;
+}
+
+figure cite a {
+  color: rgb(19, 188, 255);
+  margin-left: 3px;
+  order: 1;
+}
+
+/* ASIDE */
+
+aside {
+  width: 30%;
+  float: left;
+  order: -1;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+aside h2 {
+  background-color: #00bfff;
+  height: 70px;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+aside strong {
+  font-weight: bold;
+}
+
+aside ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+aside li:nth-child(even) {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+aside li {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 760px) {
+  main >* {
+    margin: 0 10px;
+  }
+
+  aside {
+    width: 50%;
+    margin-right: 10px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  aside {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+    order: 1;
+  }
+}
+
+
+/* FOOTER */
+
+footer {
+  margin-top: 20px;
+  clear: both;
+  background-image: url('../images/jason-dent-itA0ybdIDTs-unsplash.jpg');
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  height: 200px;
+  padding: 20px;
+}
+
+#main-footer-content {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#logo {
+  background-color: white;
+  border-radius: 25%;
+  height: 80px;
+  width: 80px;
+  transform: rotate(45deg);
+  flex-direction: row;
+  margin-left: 40px;
+}
+
+footer p {
+  text-align: center;
+  clear: both;
+  color: white;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+#main-footer-content p {
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* MODAL */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  margin: 20px;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  transition: opacity 0.3s ease-in-out;
+}
+.modal-content {
+  border: gray;
+  border-style: dashed;
+  opacity: 90%;
+  color: white;
+  background-color: #2e2d2d;
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.modal-content a {
+  color: #00bfff;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #f23232;
+  text-decoration: none;
+  cursor: pointer;
+}
